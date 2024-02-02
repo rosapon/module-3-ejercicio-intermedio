@@ -1,9 +1,9 @@
 import CountryCard from "./CountryCard"
 
-function CountryList({ countries }) {
+function CountryList({ filterCountries }) {
   return (
     <div>
-        {countries.map((countryInfo, index) => <CountryCard countryInfo={countryInfo} key={index} />)}
+        {filterCountries.map((countryInfo, index) => <CountryCard countryInfo={countryInfo} key={index} />)}
     </div>
   )
 }

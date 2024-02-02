@@ -5406,14 +5406,16 @@ const filterCountries = countries.filter((country) => country.name.common.toLowe
 
 const [filterCont, setFilterCont] = useState("");
 
-const filterContinents = countries.filter((country) => country.continents.includes(filterCont));
+const filterContinents = countries.filter((country) => country.continents === filterCont);
 
 
   return (
     <>
     <Header />
     <Filters setFilterCountry={setFilterCountry} setFilterCont={setFilterCont}/>
-    <CountryList countries = {filterCountries} FilterContinents={filterContinents}/>
+    <div className='AllCountries'>
+    <CountryList filterCountries = {filterCountries} filterContinents={filterContinents}/>
+    </div>
     </>
   )
 

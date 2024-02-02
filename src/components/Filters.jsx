@@ -1,12 +1,12 @@
 import FilterContinent from "./FilterContinent";
 import FilterCountry from "./FilterCountry";
 
-function Filters({setFilterCountry}) {
+function Filters({setFilterCountry, setFilterCont}) {
   return (
     <div>
        <h4>Filters</h4>
         <FilterCountry setFilterCountry={setFilterCountry}/>
-        <FilterContinent />
+        <FilterContinent setFilterCont={setFilterCont}/>
     </div>
   )
 }
